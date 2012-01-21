@@ -1,8 +1,8 @@
 module FacebookShareLink
   
   def FacebookShareLink.link(options)
-    raise FacebookShareLinkError, 'Missing app id' if options[:app_id].nil? || options[:app_id] == ""
-    raise FacebookShareLinkError, 'Missing redirect' if options[:redirect].nil? || options[:redirect] == ""
+    raise FacebookShareLinkError, 'Missing app_id' if options[:app_id].nil? || options[:app_id] == ""
+    raise FacebookShareLinkError, 'Missing redirect_uri' if options[:redirect_uri].nil? || options[:redirect_uri] == ""
     
     facebook_dialog_path = "http://www.facebook.com/dialog/feed?"
     
