@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    facebook_share_link (0.0.2)
+    facebook_share_link (0.0.3)
       activesupport
 
 GEM
