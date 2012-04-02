@@ -18,7 +18,11 @@ module FacebookShareLink
   ## FYI, copied and modded from Rails core
   def FacebookShareLink.to_query(key, value)
     require 'cgi' unless defined?(CGI) && defined?(CGI::escape)
-    "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
+    begin
+      "#{CGI.escape(key.to_s)}=#{CGI.escape(value.to_s)}"
+    rescue
+      nil
+    end
   end
   
 end
